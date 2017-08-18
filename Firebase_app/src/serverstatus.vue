@@ -94,7 +94,7 @@ import Vee from 'vee-validate';
             return {
                 status : 'critical',
                 op_val:' ',
-                opacity_val:' ',
+                opacity_val:' ', //needed extra variables to log out which respective data are we getting in console
                 rawdata:'',
                 data:{},
                 banner:'',
@@ -128,7 +128,7 @@ import Vee from 'vee-validate';
                     .then(data=>{  
                 console.log(this.data.banner_section[0].name);
                 this.op_val=this.data.banner_section[0].data.opacity;
-                this.opacity_val=JSON.stringify(this.op_val);
+                this.opacity_val=JSON.stringify(this.op_val); //converted json object which was string to respective data type
                 console.log(this.op_val);
                 console.log(this.opacity_val);
                     });
