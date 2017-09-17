@@ -129,9 +129,10 @@ import Vee from 'vee-validate';
                 console.log(this.data.banner_section[0].name);
                 this.op_val=this.data.banner_section[0].data.opacity;
                 this.opacity_val=JSON.stringify(this.op_val); //converted json object which was string to respective integer data type
-                console.log(this.op_val);
-                console.log(this.opacity_val);
-                    });
+                    })
+		    .catch(e => {
+		      this.errors.push(e)
+		    })
                           
             },
             set_content : function(){
@@ -139,6 +140,9 @@ import Vee from 'vee-validate';
                 .then(response=> {
                     console.log(response.data);
                 })
+		.catch(e => {
+		      this.errors.push(e)
+		    });
             },
 
              get_tagline : function(){
