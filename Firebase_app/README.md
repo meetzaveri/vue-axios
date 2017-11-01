@@ -1,4 +1,4 @@
-# samplevue
+# Vue-axios
 
 > A Vue.js project
 
